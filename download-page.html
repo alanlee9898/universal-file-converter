@@ -16,9 +16,9 @@
                 Universal File Converter
             </h1>
             <p class="text-xl text-gray-600 mb-6">
-                Privacy-first file conversion that works completely offline
+                Privacy-first file conversion with flexible plans for every need
             </p>
-            <div class="flex justify-center space-x-6 text-sm text-gray-500">
+            <div class="flex justify-center space-x-6 text-sm text-gray-500 mb-8">
                 <span class="flex items-center">
                     <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -35,8 +35,30 @@
                     <svg class="w-4 h-4 mr-2 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
                     </svg>
-                    Batch Processing
+                    Flexible Plans
                 </span>
+            </div>
+
+            <!-- Pricing Preview -->
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-6 mb-8 max-w-2xl mx-auto">
+                <h3 class="text-lg font-semibold mb-3">Choose Your Plan</h3>
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-white/20 rounded-lg p-3">
+                        <div class="font-bold">Free</div>
+                        <div class="text-sm opacity-90">5 conversions/day</div>
+                        <div class="text-xs opacity-75">10MB files</div>
+                    </div>
+                    <div class="bg-white/30 rounded-lg p-3 border-2 border-white/50">
+                        <div class="font-bold">Pro</div>
+                        <div class="text-sm opacity-90">$9.99/month</div>
+                        <div class="text-xs opacity-75">Unlimited</div>
+                    </div>
+                    <div class="bg-white/20 rounded-lg p-3">
+                        <div class="font-bold">Enterprise</div>
+                        <div class="text-sm opacity-90">$29.99/month</div>
+                        <div class="text-xs opacity-75">1GB files</div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -158,12 +180,128 @@
             </div>
         </section>
 
+        <!-- Pricing Plans -->
+        <section class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-center mb-12">Choose Your Plan</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">Free</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-4">$0</div>
+                        <p class="text-gray-600 mb-6">Perfect for trying out the service</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            5 conversions per day
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            10MB max file size
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Basic file formats
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Local processing
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-500 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">Pro</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-1">$9.99</div>
+                        <div class="text-gray-600 mb-4">/month</div>
+                        <p class="text-gray-600 mb-6">Best for regular users</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Unlimited conversions
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            100MB max file size
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            All file formats
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Priority support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-1">$29.99</div>
+                        <div class="text-gray-600 mb-4">/month</div>
+                        <p class="text-gray-600 mb-6">For power users and businesses</p>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Everything in Pro
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            1GB max file size
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            API access
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Dedicated support
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <!-- Web Version -->
         <section class="max-w-4xl mx-auto mb-16">
             <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl p-8 text-center">
                 <h2 class="text-2xl font-bold mb-4">Try the Web Version</h2>
-                <p class="mb-6">No download required. Use our web app directly in your browser.</p>
-                <a href="https://file-converter.lindy.site" 
+                <p class="mb-6">No download required. Use our web app directly in your browser with flexible pricing.</p>
+                <a href="https://file-converter.lindy.site"
                    class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                     Launch Web App
                 </a>

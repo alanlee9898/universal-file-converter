@@ -1,0 +1,17 @@
+This is a test file for the Universal File Converter.
+
+It contains some sample text that can be used to test the file conversion functionality.
+
+The app should be able to:
+1. Accept this file via drag and drop
+2. Accept this file via the File menu (Cmd+O)
+3. Convert it to different formats
+4. Download the converted result
+
+This file can be converted to formats like:
+- PDF
+- HTML
+- CSV (if structured properly)
+- And other document formats
+
+Test completed successfully if you can see this file in the converter interface!

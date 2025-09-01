@@ -1,5 +1,6 @@
-const { app, BrowserWindow, Menu, dialog, shell } = require('electron');
+const { app, BrowserWindow, Menu, dialog, shell, ipcMain } = require('electron');
 const path = require('path');
+const fs = require('fs').promises;
 const isDev = process.env.NODE_ENV === 'development';
 
 let mainWindow;
@@ -15,20 +16,22 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true,
       enableRemoteModule: false,
-      webSecurity: true,
+      webSecurity: false, // Allow file:// access for local files
       allowRunningInsecureContent: false,
+      preload: path.join(__dirname, 'preload.js'),
     },
-    icon: path.join(__dirname, '../public/icon.png'),
+    // icon: path.join(__dirname, '../public/icon.png'), // Commented out for now
     titleBarStyle: 'default',
     show: false,
   });
 
   // Load the app
-  const startUrl = isDev 
-    ? 'http://localhost:3000' 
-    : `file://${path.join(__dirname, '../out/index.html')}`;
-  
-  mainWindow.loadURL(startUrl);
+  if (isDev) {
+    mainWindow.loadURL('http://localhost:3000');
+  } else {
+    // Load the static files from the out directory
+    mainWindow.loadFile(path.join(__dirname, '../out/index.html'));
+  }
 
   // Show window when ready
   mainWindow.once('ready-to-show', () => {
@@ -130,6 +133,24 @@ function createMenu() {
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
 }
+
+// IPC handlers
+ipcMain.handle('read-file', async (event, filePath) => {
+  try {
+    const buffer = await fs.readFile(filePath);
+    return {
+      success: true,
+      data: buffer,
+      name: path.basename(filePath),
+      path: filePath
+    };
+  } catch (error) {
+    return {
+      success: false,
+      error: error.message
+    };
+  }
+});
 
 app.whenReady().then(() => {
   createWindow();

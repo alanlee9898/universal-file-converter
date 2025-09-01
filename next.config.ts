@@ -1,8 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Export a static site for Electron to load from the local filesystem
   output: 'export',
   trailingSlash: true,
+  // IMPORTANT: make asset URLs relative so they work with file:// in Electron
+  // This ensures links like /_next/static/... become ./_next/static/...
+  assetPrefix: './',
   images: {
     unoptimized: true,
   },

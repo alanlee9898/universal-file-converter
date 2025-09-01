@@ -10,6 +10,7 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  { ignores: ["**/.next/**", "out/**", "dist/**", "node_modules/**", "next-env.d.ts"] },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
@@ -17,6 +18,14 @@ const eslintConfig = [
       "@typescript-eslint/no-unused-vars": "warn",
       "jsx-a11y/alt-text": "warn",
       "prefer-const": "warn",
+      // Allow CommonJS require in plain JS config/scripts via override below
+    },
+  },
+  {
+    files: ["**/*.js", "**/*.cjs", "**/*.mjs"],
+    rules: {
+      "@typescript-eslint/no-require-imports": "off",
+      "@typescript-eslint/triple-slash-reference": "off",
     },
   },
 ];
